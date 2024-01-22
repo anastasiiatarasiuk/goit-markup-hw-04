@@ -111,16 +111,18 @@ img {
 .nav-menu-item:focus {
   color: #404bbf;
 }
-.nav-link::after {
+.nav-link.current::after {
   content: '';
   position: absolute;
-  display: block;
+  left: 0;
   height: 4px;
   background-color: #404bbf;
   border-radius: 2px;
   bottom: -1px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
+}
+.nav-link.current {
+  color: #404bbf;
 }
 
 .address-list {
@@ -143,7 +145,6 @@ img {
 
 .baner {
   background-color: #2e2f42;
-  height: 600px;
   flex-shrink: 0;
   width: 100%;
   padding: 188px 0;
@@ -156,6 +157,7 @@ img {
   background-position: center;
   background-size: cover;
   max-width: 1440px;
+  margin: 0 auto;
 }
 .baner-container {
   text-align: center;
